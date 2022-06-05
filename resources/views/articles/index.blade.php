@@ -6,7 +6,7 @@
         </div>
     @endif
     <table class="table table-bordered" style="width:95%;margin: 0
-        auto;">
+            auto;">
         <tr>
             <th>Judul</th>
             <th>Konten</th>
@@ -14,7 +14,7 @@
         </tr>
         @foreach ($articles as $article)
             <tr>
-                <td>{{ $article->title }}</td>
+                <td><a href="{{ route('articles.edit', ['article' => $article->id]) }}">{{ $article->title }}</a></td>
                 <td>{{ $article->content }}</td>
                 <td><img width="150px" src="{{ asset('storage/' . $article->featured_image) }}"></td>
             </tr>
